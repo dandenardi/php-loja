@@ -1,17 +1,17 @@
 <?php
     require_once '../../../config.php';
-    require_once '../../actions/client.php';
+    require_once '../../actions/product.php';
     require_once '../../modules/messages.php';
     require_once '../../pages/partials/header.php';
 
-    $client = readClientAction($conn);
+    $product = readProductAction($conn);
 
 ?>
 
 <div class="container">
     <div class="row">
-        <a href="../../../index.php"><h1>Client - Read</h1></a>
-        <a class="btn btn-success text-white" href="./create.php">New</a>
+        <a href="../../../index.php"><h1>Registro de produtos</h1></a>
+        <a class="btn btn-success text-white" href="./create.php">Novo</a>
         <a class="btn btn-success text-white" href="../home.php">Voltar</a>
     </div>
     <div class="row flex-center">
@@ -20,23 +20,25 @@
 
     <table class="table-users">
         <tr>
-            <th>CPF</th>
-            <th>Email</th>
-            <th>nome</th>
+            <th>Nome</th>
+            <th>Valor (R$)</th>
+            <th>Quantidade</th>
+            <th>Código de barras</th>
         </tr>
         <?php 
-            if ($client != '')
-                foreach($client as $row): 
+            if ($product != '')
+                foreach($product as $row): 
         ?>
         <tr>
-            <td class="client-cpf"><?=htmlspecialchars($row['cpf'])?></td>
-            <td class="client-email"><?=htmlspecialchars($row['email'])?></td>
-            <td class="client-name"><?=htmlspecialchars($row['nome'])?></td>
+            <td class="product-name"><?=htmlspecialchars($row['nome'])?></td>
+            <td class="product-value"><?=htmlspecialchars($row['valorUnitario'])?></td>
+            <td class="product-quantity"><?=htmlspecialchars($row['quantidade'])?></td>
+            <td class="product-barcode"><?=htmlspecialchars($row['codBarras'])?></td>
             <td>
-                <a class="btn btn-primary text-white" href="./edit.php?id=<?=$row['id']?>">Edit</a>
+                <a class="btn btn-primary text-white" href="./edit.php?id=<?=$row['id']?>">Editar produto</a>
             </td>
             <td>
-                <a class="btn btn-danger text-white" href="./delete.php?id=<?=$row['id']?>">Remove</a>
+                <a class="btn btn-danger text-white" href="./delete.php?id=<?=$row['id']?>">Remover</a>
             </td>
         </tr>
         <?php endforeach; ?>

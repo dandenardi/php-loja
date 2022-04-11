@@ -11,13 +11,13 @@
 
 <div class="container">
     <div class="row">
-        <a href="../../..index.php"><h1>Client - Delete</h1></a>
-        <a class="btn btn-success text-white" href="../../../index.php">Prev</a>
+        <a href="../../..index.php"><h1>Remoção de registro de cliente</h1></a>
+        <a class="btn btn-success text-white" href="../../../index.php">Voltar</a>
     </div>
     <div class="row flex-center">
         <div class="form-div">
             <form class="form" action="../../pages/client/delete.php" method="POST">
-                <label>Do you really want to remove the user?</label>
+                <label>Você tem certeza que quer remover este cliente?</label>
                 <input type="hidden" name="id" value="<?=$_GET['id']?>" required />
 
                 <button class="btn btn-success text-white" type="submit">Yes</button>

@@ -1,6 +1,6 @@
 <?php
 
-    require_once '../database/product.php';
+    require_once 'C:/projetos/newtab/php-projeto-individual/src/database/product.php';
 
     function findProductAction($conn, $id){
         return findProductDb($conn, $id);
@@ -10,8 +10,8 @@
         return readProductDb($conn);
     }
 
-    function createProductAction($conn, $id,  $nome, $valorUnitario, $quantidade, $codBarras){
-        $createProductDb = createClientDb($conn, $id, $nome, $valorUnitario, $quantidade, $codBarras);
+    function createProductAction($conn,  $nome, $valorUnitario, $quantidade, $codBarras){
+        $createProductDb = createProductDb($conn, $nome, $valorUnitario, $quantidade, $codBarras);
         $message = $createProductDb == 1 ? 'success-create' : 'error-create';
         return header("Location: ./read.php?message=$message");
     }
@@ -27,3 +27,4 @@
         $message = $deleteProductDb == 1 ? 'success-remove' : 'error-remove';
         return header("Location: ./read.php?message=$message");
     }
+    

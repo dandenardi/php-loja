@@ -13,8 +13,8 @@
 
 <div class="container">
     <div class="row">
-        <a href="../../../index.php"><h1>Client - Edit</h1></a>
-        <a class="btn btn-success text-white" href="../../../index.php">Prev</a>
+        <a href="../../../index.php"><h1>Edição de registro de cliente</h1></a>
+        <a class="btn btn-success text-white" href="../../../index.php">Voltar</a>
     </div>
     <div class="row flex-center">
         <div class="form-div">

@@ -44,7 +44,7 @@
     function readProductDb($conn){
         $product = [];
 
-        $sql ="SELECT * FROM produtos";
+        $sql ="SELECT * FROM produto";
         $result = mysqli_query($conn, $sql);
 
         $result_check = mysqli_num_rows($result);

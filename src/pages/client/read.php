@@ -10,8 +10,8 @@
 
 <div class="container">
     <div class="row">
-        <a href="../../../index.php"><h1>Client - Read</h1></a>
-        <a class="btn btn-success text-white" href="./create.php">New</a>
+        <a href="../../../index.php"><h1>Clientes cadastrados</h1></a>
+        <a class="btn btn-success text-white" href="./create.php">Novo cliente</a>
         <a class="btn btn-success text-white" href="../home.php">Voltar</a>
     </div>
     <div class="row flex-center">
